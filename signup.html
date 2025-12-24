@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(img2.jpg);">
+
+<div class="login-box">
+    <h2 style="color:darkgreen;">SIGN UP</h2>
+
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
+    </form>
+
+    <p>Already have an account? <a href="Login.html" style="color: red;" >Login</a></p>
+</div>
+<script>
+    window.onload = () => {
+        document.querySelector('.page').classList.add('show');
+    };
+
+    function go(event, url) {
+        event.preventDefault();
+        const page = document.querySelector('.page');
+        page.classList.remove('show');
+        page.classList.add('fade-out');
+
+        setTimeout(() => {
+            window.location.href = url;
+        }, 500);
+    }
+    </script>
+
+</body>
+</html>

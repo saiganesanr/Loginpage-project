@@ -1,0 +1,37 @@
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(img2.jpg);">
+
+    <div class="login-box">
+     <h2 style="color: darkgreen;">LOGIN</h2>
+
+        <form>
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+
+    <div class="forgot">
+        <a href="forgot.html" onclick="go(event, 'forgot.html')" style="color: red;">Forgot Password?</a>
+    </div>
+
+    <button type="submit">Login</button>
+</form>
+
+
+        <p>Don’t have an account? <a href="signup.html" style="color: red;">Sign up</a></p>
+    </div>
+<script>
+function go(e, url) {
+    e.preventDefault();
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.href = url;
+    }, 600);
+}
+</script>
+
+
+</body>
+</html>
